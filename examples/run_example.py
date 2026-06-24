@@ -23,7 +23,7 @@ if __name__ == '__main__':
     QWidget {
         color: #222222;
     }
-    QLineEdit, QTextEdit, QPlainTextEdit {
+    QLineEdit, QTextEdit, QPlainTextEdit, QLabel {
         color: #222222;
     }
     QPushButton {
