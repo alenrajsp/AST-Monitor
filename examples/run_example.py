@@ -19,6 +19,17 @@ route_data = os.path.join(os.path.dirname(os.path.abspath(
 
 if __name__ == '__main__':
     app = QtWidgets.QApplication(sys.argv)
+    app.setStyleSheet("""
+    QWidget {
+        color: #222222;
+    }
+    QLineEdit, QTextEdit, QPlainTextEdit, QLabel {
+        color: #222222;
+    }
+    QPushButton {
+        color: #222222;
+    }
+    """)
     window = AST(hr_data, gps_data, route_data)
     window.show()
     sys.exit(app.exec())

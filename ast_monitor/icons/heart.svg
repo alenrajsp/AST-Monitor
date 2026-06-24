@@ -15,21 +15,7 @@
    inkscape:version="1.0.1 (3bc2e813f5, 2020-09-07)"
    sodipodi:docname="heart.svg">
   <defs
-     id="defs2">
-    <filter
-       inkscape:collect="always"
-       style="color-interpolation-filters:sRGB"
-       id="filter894"
-       x="-1.4482681e-05"
-       width="1.000029"
-       y="-8.6105065e-06"
-       height="1.0000172">
-      <feGaussianBlur
-         inkscape:collect="always"
-         stdDeviation="0.00017781559"
-         id="feGaussianBlur896" />
-    </filter>
-  </defs>
+     id="defs2" />
   <sodipodi:namedview
      id="base"
      pagecolor="#ffffff"
@@ -72,7 +58,7 @@
      transform="translate(-36.448494,-82.174325)">
     <path
        id="path859"
-       style="fill:#d03434;fill-opacity:1;stroke:#d03434;stroke-width:0;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;filter:url(#filter894)"
+       style="fill:#d03434;fill-opacity:1;stroke:#d03434;stroke-width:0;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        d="m 297.93359,501.60547 c -23.35492,-0.30247 -40.07174,18.03183 -47.41601,37.31055 -15.23014,39.97916 22.80169,70.91409 108.08594,150.00781 85.28426,-79.09372 123.31802,-110.02865 108.08789,-150.00781 -12.7036,-33.34697 -53.45095,-63.87013 -108.08789,0 -23.04996,-26.94521 -43.62714,-37.08983 -60.66993,-37.31055 z"
        transform="matrix(0.57856723,0,0,0.61699871,-106.59086,-227.31195)" />
   </g>
