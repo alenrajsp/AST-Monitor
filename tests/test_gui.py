@@ -1,6 +1,7 @@
 import os
 import random
 import pytest
+from PyQt6.QtCore import QEvent
 from PyQt6.QtWidgets import QApplication
 
 try:
@@ -24,14 +25,12 @@ def widget(qtbot):
     yield window
 
 
-    try:
-        if hasattr(window, "server_thread") and window.server_thread:
-            window.server_thread.stop()
-            if hasattr(window.server_thread, "wait"):
-                window.server_thread.wait(3000) 
-    finally:
-        window.close()
-        QApplication.processEvents()
+    window.cleanup()
+    window.close()
+    window.deleteLater()
+    QApplication.processEvents()
+    QApplication.sendPostedEvents(None, QEvent.Type.DeferredDelete)
+    qtbot.wait(100)
     
 
 def test_window_title(qtbot,widget):    
