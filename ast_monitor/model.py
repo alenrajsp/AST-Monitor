@@ -261,7 +261,7 @@ class AST(QMainWindow, Ui_MainWindow):
             with open(trainings[i], 'r') as f:
                 training_json = f.read()
                 training = json.loads(training_json)
-                training['file'] = trainings[i].split('\\')[-1]
+                training['file'] = os.path.basename(trainings[i])
                 try:
                     interval_training = IntervalTraining(
                         training,
@@ -272,7 +272,7 @@ class AST(QMainWindow, Ui_MainWindow):
                             not self.interval_training == interval_training
                     ):
                         self.interval_training = interval_training
-                        name = trainings[i].split('\\')[-1].split('.')[0]
+                        name = os.path.splitext(os.path.basename(trainings[i]))[0]
                         break
                 except Exception:
                     pass
@@ -280,8 +280,8 @@ class AST(QMainWindow, Ui_MainWindow):
             with open(trainings[0], 'r') as f:
                 training_json = f.read()
                 training = json.loads(training_json)
-                training['file'] = trainings[0].split('\\')[-1].split('.')[0]
-                name = trainings[i].split('\\')[-1].split('.')[0]
+                training['file'] = os.path.basename(trainings[0])
+                name = os.path.splitext(os.path.basename(trainings[0]))[0]
                 self.interval_training = IntervalTraining(
                     training,
                     self.basic_data
@@ -465,7 +465,7 @@ class AST(QMainWindow, Ui_MainWindow):
                             str(int(average_hr))
                         )
                     else:
-                        self.lbl_interval_proposed_heart_rate.setText('-')
+                        self.lbl_interval_average_heart_rate.setText('-')
             else:
                 self.swgt_interval_performance.setCurrentIndex(0)
 
